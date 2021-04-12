@@ -30,5 +30,6 @@ if __name__ == '__main__':
     data = config["API"]["payload"]  # YYYY-MM-DD
     headers = {'content-type': 'application/json', 'Authorization': token}
 
+    # Request data
     r = requests.get(url, data=json.dumps(data), headers=headers)
     print(type(r.json()))
